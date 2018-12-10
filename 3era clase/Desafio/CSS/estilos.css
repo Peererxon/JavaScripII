@@ -1,0 +1,46 @@
+#exitoso{
+	position: relative;
+ left: 71px;
+ font-size: 20px;
+ color: red;
+ z-index: 2;
+}
+
+#error{
+position: relative;
+ right:63px;
+ font-size: 20px;
+ color: red;
+ z-index: 3;
+}
+
+body{
+	background-image: url(../img/fondo.jpg);
+}
+input{
+	transition-duration: 1s;
+}
+
+
+input:hover{
+	transform: scale(1.5);
+}
+
+div+p{
+	text-align: center;
+}
+#formulario{
+	background: #0848d8;
+	width: 35%;
+	margin: auto;
+}
+
+span{
+	color: black;
+	visibility: hidden;
+	font-size: 16px;
+}
+
+h1{
+	display: inline-block;
+}

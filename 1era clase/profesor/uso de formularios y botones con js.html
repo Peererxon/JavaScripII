@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>segundo ejercicio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <script>
+        function procesar(){
+            //alert("el precio es de "+document.f1.Precio.value +" y la cantidad es de: " +document.f1.Cantidad.value)
+            //esta fue una prueba mia para el uso de los alert
+            let precio=parseFloat(document.f1.Precio.value);
+            let cantidad=parseInt(document.f1.Cantidad.value);
+            let nombre=(document.f1.nombre.value);
+            let subtotal= precio*cantidad;
+            document.f1.Subtotal.value=subtotal;
+            //document.getElementById("Subtotal").innerHTML=subtotal
+        }
+
+        var n=0;
+        function agregar(){
+            n++;
+            let listado=document.getElementById("listado");
+            listado.innerHTML+=n+document.f1.nombre.value+" - "+document.f1.Subtotal.value+"<br>";
+            document.f1.Subtotal.value="";
+            document.f1.Precio.value="";
+            document.f1.Cantidad.value="";
+            //document.getElementById("Subtotal").innerHTML="";
+            
+        }
+    </script>
+    <h1>Datos</h1>
+    <form name="f1">
+        nombre <br>
+        <input type="text" name="nombre" value=""> <br>
+        Precio <br>
+        <input type="text" name="Precio" value="1"> <br>
+        Cantidad <br>
+        <input type="text" name="Cantidad" value="1"> <br>
+        Subtotal <br>
+        <input type="text" name="Subtotal" value=""> <br>
+        
+        <input type="button" value="Procesar" onclick="procesar()"/>
+        <input type="button" value="agregar" onclick="agregar()">
+        
+    </form>
+
+    <div id="listado">
+        <h1>Articulos Procesados</h1>
+
+    </div>
+</body>
+</html>

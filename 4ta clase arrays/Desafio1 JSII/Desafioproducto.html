@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>desafio4 jsII</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+    <table width="700">
+            <tr>
+                <td valign="top">
+                    <form name="form1">
+
+                        Codigo del producto <br>
+                        <input name="codigo" type="text" placeholder="presione enter para continuar" /><br>
+
+                        Nombre del producto <br>
+                        <input name="nombre" type="text" readonly="" placeholder="Nombre del producto buscado" /><br>
+
+                        Precio <br>
+                        <input name="precio" type="text" readonly="" placeholder="precio por unidad del producto buscado" /><br>
+
+                        Cantidad <br>
+                        <input name="cantidad" type="text" placeholder="cantidad de productos a llevar" autocomplete="off"/><br>
+
+                        Productos Disponible <br>
+                        <input name="cantidadDisponible" type="text" placeholder="productos disponibles" autocomplete="off" readonly="" /><br>
+
+                        Subtotal <br>
+                        <input name="subtotal" type="text" readonly=""/><br><br>
+
+                         <input name="boton" type="button" value="Agregar" disabled="enabled" />
+
+                         <input name="factura" type="button" value="Facturar" disabled="enabled" />
+                    </form>
+                </td>
+                <td valign="top">
+                    <h2>Productos que se desean facturar </h2>
+                    <div id="listado">
+                        <p id="subtotales"></p>
+                        <p id="total"></p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <script type="text/javascript" src="lib_validaciones.js"></script>
+        <script src="Desafioproducto.js"></script>
+</body>
+</html>

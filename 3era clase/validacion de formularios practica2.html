@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Segunda practica jsII 2da clase</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function validar(form){
+			if (!esta_vacio(form.nombre,"Debe escribir el nombre"))
+				if (validarcorreo(form.correo))
+					if (validar_select(form.ciudad))
+							if (form.acepto.checked==false) {
+								alert("Debe aceptar las condiciones")
+							}else
+								if (confirm("Seguro?"))
+										form.submit();
+		}
+	</script>
+	<form name="form1">
+		<input type="text" name="edad" placeholder="edad"
+		onkeydown="console.log('keydown:',event.keycode)">
+		<input type="text" name="correo" placeholder="Correo"/>
+		<input type="password" name="clave" placeholder="Clave"/>
+		<input type="text" name="nombre" placeholder="nombre"
+		onkeypress=" return validarletra(event)">
+		<select name="ciudad">
+			<option >Seleccion</option>
+			<option>Barquisimeto</option>
+			<option>Cabudare</option>
+			<option>Caracas</option>
+		</select>
+		<input type="checkbox" value="" name="acepto" > <!--onclick="alert(this.checked)". Esta era la forma tradicional-->
+		Acepto las condiciones <br> <br>
+			<input type="button" value="Registrar" onclick="validar(this.form)">
+	</form>
+</body>
+<script src="js/lib_validaciones.js"></script>
+<script src="js/practica2.js"></script>
+</html>

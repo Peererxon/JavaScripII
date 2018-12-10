@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <script>
+              var n=0;
+            function agregar(){
+                n++;
+                let listado=document.getElementById("listado");
+                listado.innerHTML+=n+" - "+document.f1.subtotal.value+"<br>";
+                document.f1.subtotal.value="";
+                document.f1.precio.value="";
+                document.f1.cantidad.value="";
+                document.f1.btnAgregar.disabled=true;
+                document.getElementById("resultado").innerHTML="";
+            }
+
+            function procesar(){
+                let precio=parseFloat(document.f1.precio.value)
+                let cantidad=parseInt(document.f1.cantidad.value)
+                let subtotal= precio*cantidad;
+                
+                document.f1.btnAgregar.disabled=false;
+                
+                if (precio=="" || precio==undefined || isNaN(precio))
+                precio=0;
+                
+                if (cantidad=="" || cantidad==undefined || isNaN(cantidad))
+                cantidad=0;
+
+                if (subtotal=="" || subtotal==undefined || isNaN(subtotal))
+                subtotal=0;
+                
+                document.f1.subtotal.value=subtotal
+            }
+            </script>
+
+        <h1>Datos</h1>
+        <form name=f1>
+            Precio <br>
+
+            <input type="text" name=precio value="1"> <br>
+
+            <br>Cantidad<br>
+
+            <input type="text" name=cantidad value="1">  <br><br>
+
+            Sub total <br>   
+            <input type="text" name=subtotal value=""> <br><br>
+
+            <input type="button" value="Procesar" onclick="procesar()"/>
+
+            <input type="button"  name="btnAgregar"  value="Agregar" disabled="disabled" onclick="agregar()" />
+        </form>
+        <div id="listado">
+                <h1>Articulos Procesados</h1>
+            </div>
+    </body>
+</html>

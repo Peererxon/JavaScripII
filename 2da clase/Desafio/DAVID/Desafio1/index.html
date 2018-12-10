@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Desafio 1 JS</title>
+        <script src="Alumnos.js"></script>
+        <script src="lib_validaciones.js"></script>
+    </head>
+    <body>
+        <form name="alumnos">
+            <h1>Evaluación</h1>
+            <p>Nombre del estudiante</p>
+            <input type="text" name="nombre" onblur="validarNombre(this,'nombre')">
+            <label id="nombre"></label> <br>
+            <p>Nota del desafio 1</p>
+            <input type="text" name="desafio1" onblur="validarNotas(this,'desafio1')" >
+            <label id="desafio1"></label> <br>
+            <p>Nota del desafio 2</p>
+            <input type="text" name="desafio2" onblur="validarNotas(this,'desafio2')">
+            <label id="desafio2"></label> <br>
+            <p>Nota del desafio 3</p>
+            <input type="text" name="desafio3" onblur="validarNotas(this,'desafio3')">
+            <label id="desafio3"></label> <br>
+            <p>Nota del desafio 4</p>
+            <input type="text" name="desafio4" onblur="validarNotas(this,'desafio4')">
+            <label id="desafio4"></label> <br>
+            <p>Nota del examen</p>
+            <input type="text" name="examen" onblur="validarNotas(this,'examen')">
+            <label id="examen"></label> <br>
+
+            <p>Promedio de los 4 desafios</p>
+            <input type="text" name="promedio" readonly="readonly"> <br>
+            <p>El estudiante:</p>
+            <input type="text" name="mensaje" readonly="readonly"> <br>
+            <br>
+            <input type="button" value="Procesar alumno" 
+            onclick="validarCampos(this.form)"> <br>
+            <br>
+            <input type="button" value="Agregar" onclick="Agregar()">
+        </form>
+
+        <div id="Alumnos">
+            <h1>Lista de estudiantes agregados</h1>
+        </div>
+        <br>
+        <div id="seccion"></div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Segunda practica jsII 2da clase</title>
+</head>
+<body>
+	<script src="lib_validaciones.js"></script>
+
+	<script type="text/javascript">
+		function validar(form){
+			if (esta_vacio(form.nombre,"Debe escribir el nombre"))
+				if (validarcorreo(form.correo))
+					if (validar_select(form.ciudad))
+						if (validar_numero(form.cedula) )
+							if (form.acepto.checked==false) {
+								alert("Debe aceptar las condiciones")
+							}else
+									if (confirm("Seguro?"))
+											form.submit();
+		}
+	</script>
+	<form>
+		<input type="text" name="cedula" placeholder="cedula"/>
+		<input type="text" name="nombre" placeholder="Nombre"/>
+		<input type="text" name="correo" placeholder="Correo"/>
+		<input type="password" name="clave" placeholder="Clave"/>
+		<select name="ciudad">
+			<option >Seleccion</option>
+			<option>Barquisimeto</option>
+			<option>Cabudare</option>
+			<option>Caracas</option>
+		</select>
+		<input type="checkbox" value="" name="acepto">
+		Acepto las condiciones <br> <br>
+			<input type="button" value="Registrar" onclick="validar(this.form)">
+	</form>
+</body>
+</html>

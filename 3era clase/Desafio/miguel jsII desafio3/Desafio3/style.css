@@ -1,0 +1,18 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    text-align: center;
+    display: none;
+}
+.caja{
+    margin: 5%;
+    width: 35%;
+    float: left;
+}
+.caja .boton{
+    float: right;
+}
+.error{
+    color: red;
+}

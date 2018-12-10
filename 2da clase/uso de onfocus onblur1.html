@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>2da clase JSII</title>
+</head>
+<body>
+
+	<script>
+
+		function registrar(f){
+			//document.form1.correo.focus();
+			f.correo.focus();
+			if (confirm("Seguro?"))
+				f.submit
+		}
+
+		//funcion con y sin mayusculas
+		function mayusculas(){
+			//Recordar que value es de tipo string por eso tiene este metodo UpperCase
+			document.form1.usuario.value=document.form1.usuario.value.toUpperCase();
+		}
+		function minusculas(){
+			document.form1.usuario.value=document.form1.usuario.value.toLowerCase();
+		}
+
+		function mayusculastodo(x){
+			x.value=x.value.toUpperCase();
+			x.style.backgroundColor="white";
+		}
+
+		function minusculastodo(input){
+			input.value=input.value.toLowerCase();
+			input.style.backgroundColor="yellow";
+		}
+	</script>
+
+	<script >
+
+		function validar_busqueda(){
+			if (document.buscar.q.value==""){ 
+			document.buscar.q.style.backgroundColor="yellow" 
+			alert("Debe escribir algo para buscar");
+			document.buscar.q.focus();
+			return false;
+
+			}else{
+				document.buscar.q.style.backgroundColor="white";
+				return corfirm('seguro?');
+			}
+		}
+
+		function validar_formulario(){
+			if (document.form1.usuario.value=="") {
+				alert("Debe ingresar un usuario");
+				document.form1.usuario.style.backgroundColor="red";
+				document.form1.usuario.focus();
+				return false;
+			}
+			else if (document.form1.clave.value.length<3) {
+				alert("su contraseña debe poseer minimos 3 caracteres");
+				document.form1.clave.style.backgroundColor="red";
+				document.form1.clave.focus();
+				return false
+			}else if (true) {}
+
+		}
+
+
+	</script>
+	<h2>Buscar</h2>
+	<form name="buscar" onsubmit="return validar_busqueda()" action="http://google.com.ve/search">
+		<input type="text" name="q" />
+		<input type="submit" value="buscar"/>
+		<!--el boton submit envia los datos al action
+			en este caso para que funcione con google debe de llamarse q. Dependiendo de la pagina-->
+	</form>
+	<h2>Registro de usuario</h2>
+	<form name="form1" method="POST" >
+		Usuario <br>
+		<input type="text" onblur="mayusculastodo(this)" onfocus="minusculastodo(this)" name="correo" placeholder="correo" /> <br>
+		<input type="text"  onblur="mayusculastodo(this)" onfocus="minusculastodo(this)" name="telefono" placeholder="telefono" /> <br>
+		<input type="text" onfocus="mayusculas()" onblur="mayusculas()" name="usuario" placeholder="Usuario" /> <br>
+		<input type="password" name="clave" placeholder="contraseña" /> <br>
+		<input type="password" name="confirmacion" placeholder="confirmacion" />  <br>
+		<!--con esot nos referimos al formulario contenedor-->
+		<input type="button" value="Registrar" onclick="validar_formulario()" />
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>desafio3 jsII</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+     <script src="js/lib_validaciones.js"></script> 
+    
+</head>
+<body>
+	<div id="formulario">
+        <h1 style="color: red">Registro</h1>
+        <span id="exitoso">Registro exitoso</span>
+        <span id="error">Hay campos sin llenar</span>
+        <form name="registro" onsubmit="return campos_vacios(this)">  
+
+            Cedula <br> 
+            <input type="text" name="cedula" placeholder="EJ:28119876" maxlength="8" /> <br>
+
+            Nombre <br>
+            <input type="text" name="nombre"  placeholder="ingrese su nombre " id="nombre"> 
+
+            <span id="alertanombre" style="visibility: hidden;">El nombre no debe contener numeros</span><br>
+
+
+            correo <br> 
+            <input type="text" name="correo" placeholder="correo electronico @"/>
+            <!-- -->
+            <span id="alertacorreo" style="visibility: hidden;"> Debe ingresar un formato de correo electronico valido: nombrejemplo@dolares.com</span>
+
+            <br>
+
+            Nombre de usuario <br>
+            <input type="text" name="Nusuario" placeholder="Ej:maclovin" />
+            <span id="alertausuario" style="visibility: hidden;"> El nombre de usuario no debe iniciar con numeros y debe poseer minimo 4 caracteres</span>
+
+            <br>
+
+            Clave <br> 
+           <input type="password" name="clave" placeholder="minimo 4 caracteres" required pattern=".{4,}"
+            oninvalid="setCustomValidity('El password es obligatorio y debe tener como mínimo 4 caracteres')"
+            oninput="setCustomValidity('')" />
+
+            <br>
+
+            Confirmar clave <br> 
+            <input type="password" name="confirmacion" placeholder="confirmacion de la clave"/>
+            <span id="alertaconfirmacion" style="visibility: hidden;"> La confirmacion de la clave debe ser igual a la clave.</span> <br>
+
+            Día de nacimiento <br> 
+            <select type="select" name="dia"/> 
+                <option>Lunes</option>
+                <option>Martes</option>
+                <option>Miercoles</option>
+                <option>Jueves</option>
+                <option>Viernes</option>
+                <option>Sabado</option>
+                <option>Domingo</option>
+            </select> <br>
+
+            Mes <br> 
+            <select type="select" name="mes"/> 
+                <option>Enero</option>
+                <option>Febrero</option>
+                <option>Marzo</option>
+                <option>Abril</option>
+                <option>Mayo</option>
+                <option>Junio</option>
+                <option>Julio</option>
+                <option>Agosto</option>
+                <option>Septiembre</option>
+                <option>Octubre</option>
+                <option>Noviembre</option>
+                <option>Diciembre</option>
+            </select>  <br>
+
+                Año <br> 
+            <select type="select" name="año"/> 
+                <option>2000</option>
+                <option>2001</option>
+                <option>2002</option>
+                <option>2003</option>
+                <option>2004</option>
+                <option>2005</option>
+                <option>2006</option>
+                <option>2007</option>
+                <option>2008</option>
+                <option>2009</option>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <!-- edad minima: 5 años -->
+            </select> <br>
+
+            Curso <br>
+            <select type="select" name="curso">
+                <option>Logica de programacion</option>
+                <option>HTML5 y CCS3</option>
+                <option>TypeScript</option>
+                <option>Java</option>
+                <option>Javascript</option>
+                <option>C++</option>
+            </select> <br>
+
+            Nivel <br>
+            <select type="select" name="curso">
+                <option>I</option>
+                <option>II</option>
+                <option>III</option>
+                <option>IV</option>
+            </select> <br>
+
+
+            Horario <br>
+            <textarea name="horario" rows="5" cols="20"></textarea> <br>
+         <!-- los br son para que se creen las lineas entre el "titulo" de los select y sus opciones -->
+
+            <label >Masculino</label>
+            <input type="radio" name="Sexo" value="Masculino">
+
+            <label >femenino</label>
+            <input type="radio" name="Sexo" value="femenino"> <br>
+
+                telefono <br>
+            <input type="text" name="telefono" placeholder="04161506807"> <br>
+
+            <input type="submit" class="boton" value="Enviar" name="enviar"/>
+            </form>
+    </div>
+
+
+    <p>&copy;Anderson Gil</p>
+</body>
+     <script src="js/desafio3 jsII.js"></script>
+</html>

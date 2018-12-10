@@ -1,0 +1,11 @@
+#alumnos{
+	position: absolute;
+    left: 50%;
+    top: 1px;
+    background: #1dc1d2;
+}
+
+#formulario{
+	background: #1dc1d2;
+	width: 300px;
+}

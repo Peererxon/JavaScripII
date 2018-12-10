@@ -1,0 +1,25 @@
+<!doctype html> 
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Comportamiento por defecto</title>
+  </head> 
+  <body>
+     <h2>Ejemplo de validación de un formulario usando HTML 5</h2>
+<form>
+    Nombre: <input name="txtNombre" type="text" id="txtNombre" required
+                   oninvalid="setCustomValidity('El campo nombre es obligatorio')" 
+                   oninput="setCustomValidity('')"/><br /><br />
+    Password: <input type="password" name="txtPwd" id="txtPwd" required pattern=".{6,}"
+                     oninvalid="setCustomValidity('El password es obligatorio y debe tener como mínimo 6 caracteres')"
+                     oninput="setCustomValidity('')" /><br /><br />
+    Edad: <input name="txtEdad" type="number" id="txtEdad" min="18" max="60"
+                 oninvalid="setCustomValidity('La edad debe ser entre 18 y 60 años.')"
+                 oninput="setCustomValidity('')" /><br /> <br />
+    Email: <input name="txtEmail" id="txtEmail" type="email"
+                  oninvalid="setCustomValidity('Debe ingresar un email válido')"
+                  oninput="setCustomValidity('')" /><br /><br />
+    <input type="submit" value="Enviar"  id="btnSubmit" name="btnSubmit"/>
+</form>
+  </body>
+</html>

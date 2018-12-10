@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Desafio II JS II</title>
+	<script type="text/javascript" src="JS/Notas.js"></script>
+	<script type="text/javascript" src="JS/lib_validaciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="CSS/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+	<div id="errornombre" class="error">
+		<img src="img/warning.svg" alt="">
+		Nombre Invalido
+	</div>
+	<div id="errorapellido" class="error">
+		<img src="img/warning.svg" alt="">
+		Apellido Invalido
+	</div>
+	<div id="errorcedula" class="error">
+			<img src="img/warning.svg" alt="">
+		Cedula Invalida
+	</div>
+	<div id="errorexamen" class="error">
+			<img src="img/warning.svg" alt="">
+		Nota Invalida (0 - 100)
+	</div>
+	<div id="errornot1" class="error">
+			<img src="img/warning.svg" alt="">
+		Nota Invalida (0 - 100)
+	</div>
+	<div id="errornot2" class="error">
+			<img src="img/warning.svg" alt="">
+		Nota Invalida (0 - 100)
+	</div>
+	<div id="errornot3" class="error">
+			<img src="img/warning.svg" alt="">
+		Nota Invalida (0 - 100)
+	</div>
+	<div id="errornot4" class="error">
+			<img src="img/warning.svg" alt="">
+		Nota Invalida (0 - 100)
+	</div>
+	<h1>Formulario de Registro de Notas</h1>
+	<div id="formdiv">
+		<form id="formulario">
+			<div>
+				<p>Nombre</p>
+				<p>Apellido</p>
+				<p>Cedula (V-)</p>
+				<p>Nota del Examen</p>
+				<p>Nota Desafio 1</p>
+				<p>Nota Desafio 2</p>
+				<p>Nota Desafio 3</p>
+				<p>Nota Desafio 4</p>
+				<p>Promedio de los Desafios</p>
+				<p>Estado</p>
+			</div>
+			
+			<input 
+			type="text" 
+			name="nombre"
+			onblur="validarInfo(this, 'errornombre')"
+			value=""><br>
+			
+			<input type="text"
+			name="apellido" 
+			onblur="validarInfo(this, 'errorapellido')"
+			value=""><br>
+			
+			<input type="text" 
+			name="cedula"
+			onblur="validarNum(this, 'errorcedula')" 
+			value=""><br>
+			
+			<input type="text" 
+			name="examen"
+			onblur="validarNota(this, 'errorexamen')"
+			value=""><br>
+			
+			<input type="text" 
+			name="nota1"
+			onblur="validarNota(this, 'errornot1')"
+			value=""><br>
+			
+			<input type="text" 
+			name="nota2" 
+			onblur="validarNota(this, 'errornot2')"
+			value=""><br>
+			
+			<input type="text" 
+			name="nota3" 
+			onblur="validarNota(this, 'errornot3')"
+			value=""><br>
+			
+			<input type="text" 
+			name="nota4"
+			onblur="validarNota(this, 'errornot4')"
+			value=""><br>
+			
+			<input type="text" 
+			name="promedio" 
+			disabled="disabled" 
+			value=""><br>
+			
+			<input type="text" 
+			name="estado" 
+			disabled="disabled" 
+			value=""><br>
+		</form>
+
+		<div id="errordiv">
+			<p id="errormsg">ERROR: Los Datos Ingresados no son Validos</p>
+		</div>
+		
+		<button onclick="limpiarDatos()">Limpiar</button>
+		<button onclick="procesarDatos()">Procesar</button>
+		<button onclick="enviarDatos()" id="enviar" disabled="disabled">Enviar</button>
+	</div>
+
+	<h2>Tabla de Registro de Notas</h2>
+	<div id="alumnos">
+		<table>
+			<thead>
+				<th>Nombre</th>
+				<th>Apellido</th>
+				<th>Cedula</th>
+				<th>Examen</th>
+				<th>Desafio 1</th>
+				<th>Desafio 2</th>
+				<th>Desafio 3</th>
+				<th>Desafio 4</th>
+				<th>Promedio</th>
+				<th>Estado</th>
+			</thead>
+			<tr>
+				<th id="nombre"></th>
+				<th id="apellido"></th>
+				<th id="cedula"></th>
+				<th id="examen"></th>
+				<th id="nota1"></th>
+				<th id="nota2"></th>
+				<th id="nota3"></th>
+				<th id="nota4"></th>
+				<th id="promedio"></th>
+				<th id="estado"></th>
+				</tr>
+		</table>
+		<div id="estadisticas">
+			<p id="salidas"></p>
+		</div>
+	</div>
+</body>
+</html>

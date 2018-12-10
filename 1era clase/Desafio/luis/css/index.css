@@ -1,0 +1,54 @@
+body{
+	background:black;
+}
+
+#form{
+	background:lightgray;
+	width:450px;
+	position:relative;
+	left:20px;
+	top:20px; 
+	border-radius:10px;
+	padding:20px;
+	transition-duration:0.7s;
+}
+
+.boton{
+	position: relative;
+	top:11.5px;
+	background:white;
+	border-radius:5px;
+	padding:10px;
+	font-size:15px;
+	transition-duration:1.5s;
+}
+
+.boton:hover{
+	background:black;
+	color:white;
+}
+
+#inputs{
+	position:relative;
+	left:150px;
+}
+
+#calificaciones{
+	width:275px;
+	position:relative;
+	left:700px;
+	bottom:500px;
+	background:lightgray;
+	border-radius:10px;
+	padding:10px;
+	transition-duration:0.7s;
+}
+
+#calificaciones:hover{
+	transform:scale(1.1);
+}
+
+
+#form:hover{
+	transform:scale(1.1);
+}

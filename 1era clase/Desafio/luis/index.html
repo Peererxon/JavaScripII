@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Luis</title>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+	<div id="form">
+    <h1>Registrar Calificaciones de Alumnos</h1>
+    <form name="registrarnotas">
+    	<div id="inputs">
+        Estudiante <br>
+        <input type="text" name="nombre"/ maxlength="10"> <br>
+        Nota Desafío #1 <br>
+        <input type="text" name="desafio1" maxlength="3"/> <br>
+        Nota Desafío #2 <br>
+        <input type="text" name="desafio2"  maxlength="3"/> <br>
+        Nota Desafío #3 <br>
+        <input type="text" name="desafio3"  maxlength="3"/> <br>
+        Nota Desafío #4 <br>
+        <input type="text" name="desafio4"  maxlength="3"/> <br>
+        Nota Examen <br>
+        <input type="text" name="examen"  maxlength="3"/> <br>
+        Promedio del estudiante en los desafíos <br>
+        <input type="text" name="promedio" readonly="readonly"/> <br>
+        El  Estudiante está: <br>
+        <input type="text" name="estado" readonly="readonly"/> <br>
+        <input type="button" class="boton" value="Procesar" onclick="procesar()"/> 
+        <input type="button" class="boton" value="Agregar" name="btnAgregar" disabled="disabled" onclick="agregar()"/> 
+        </div>
+    </form>
+    </div>
+
+    
+    <div id="calificaciones">
+        <h1>Nota Estudiantes</h1>
+    </div>
+
+</body>
+</html>

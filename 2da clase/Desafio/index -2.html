@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>desafio2 jsII</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="CSS/estilos.css">
+    <script src="js/lib_validaciones.js"></script>
+    <script src="js/desafio2 jsII -2.js"></script>
+    
+</head>
+<body>
+<body>
+	<div id="formulario">
+        <h1 style="color: red">Registrar alumno</h1>
+        <form name="registrodenotas" >  
+            Nombre de Estudiante <br>
+            <input type="text" name="nombre"  placeholder="ingrese el nombre del alumno" id="nombre" onblur="nombre_valido('nombre')"> <span id="alertanombre" style="visibility: hidden;">El nombre no debe contener numeros</span><br>
+
+            Cedula <br> 
+            <input type="text" name="cedula" placeholder="cedula del  alumno" /> <br>
+
+            Nota Del Desafio 1 <br> 
+            <input type="text" name="desafio1" placeholder="nota desafio 1" onblur="notas_validas(this,'alertadesafio1')" />
+            <span id="alertadesafio1" style="visibility: hidden;"> La nota debe de estar entre 0 y 100</span>
+
+            <br>
+
+            Nota Del Desafio 2 <br>
+            <input type="text" name="desafio2" placeholder="nota desafio 2" onblur="notas_validas(this,'alertadesafio2')" />
+            <span id="alertadesafio2" style="visibility: hidden;"> La nota debe de estar entre 0 y 100</span>
+
+            <br>
+
+            Nota Del Desafio 3 <br> 
+           <input type="text" name="desafio3" placeholder="nota desafio 3" onblur="notas_validas(this,'alertadesafio3')" />
+            <span id="alertadesafio3" style="visibility: hidden;"> La nota debe de estar entre 0 y 100</span>
+
+            <br>
+
+            Nota Del Desafio 4 <br> 
+            <input type="text" name="desafio4" placeholder="nota desafio 4" onblur="notas_validas(this,'alertadesafio4')" />
+            <span id="alertadesafio4" style="visibility: hidden;"> La nota debe de estar entre 0 y 100</span>
+
+            <br>
+
+            Nota Del Examen <br> 
+            <input type="text" name="examen" placeholder="nota del examen" onblur="notas_validas(this,'alertaexamen')" />
+            <span id="alertaexamen" style="visibility: hidden;"> La nota debe de estar entre 0 y 100</span>
+
+            <br>
+
+
+            Promedio del estudiante en los desafíos <br>
+            <input type="text" name="promedio" readonly="readonly"/> <br>
+
+            El  Estudiante está: <br>
+            <input type="text" name="estado" readonly="readonly"/> <br>
+            <input type="button" class="boton" value="Procesar" name="procesarboton" 
+            onclick="campos_vacios(this.form),procesar()"/> 
+
+            <input type="button" class="boton" value="Agregar" name="guardarBoton" disabled="enabled" onclick="agregar()"/> 
+            </form>
+    </div>
+
+    
+    <div id="alumnos">
+        <h1 style="color: red">Resultados</h1>
+    </div>
+
+    <p>&copy;Anderson Gil</p>
+</body>
+</html>
+</body>
+</html>

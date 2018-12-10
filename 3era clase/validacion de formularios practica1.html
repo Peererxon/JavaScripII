@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Segunda practica jsII 2da clase</title>
+</head>
+<body onkeydown="cambiarColor(event)" style="background-color: rgb(1, 1,1) ">
+	<script src="js/lib_validaciones.js"></script>
+	<script>
+	var r=1,g=1,b=1;
+	 function cambiarColor(e){
+		 console.log(e.keyCode)
+		 if(e.keyCode==38){
+			 console.log("pulsaste arriba");
+		 r=Math.random()*255;
+		 g=Math.random()*255;
+		 b=Math.random()*255;
+		}
+		 else
+			 if (e.keyCode==40)
+				 r=g=b=1;
+		document.body.style.backgroundColor="rgb("+r+","+g+","+b+")";
+	 }
+	</script>
+	<script type="text/javascript">
+		function validar(form){
+			if (!esta_vacio(form.nombre,"Debe escribir el nombre"))
+				if (validarcorreo(form.correo))
+					if (validar_select(form.ciudad))
+							if (form.acepto.checked==false) {
+								alert("Debe aceptar las condiciones")
+							}else
+								if (confirm("Seguro?"))
+										form.submit();
+		}
+	</script>
+	<form>
+		<input type="text" name="edad" placeholder="edad"
+		onkeypress="return validar_numero(event) " 
+		onkeypress="console.log('keypress:',event.charCode)"
+		onkeydown="console.log('keydown:',event.keycode)">
+		<input type="text" name="correo" placeholder="Correo"/>
+		<input type="password" name="clave" placeholder="Clave"/>
+		<input type="text" name="nombre" placeholder="nombre"
+		onkeypress=" return validarletra(event)">
+		<select name="ciudad">
+			<option >Seleccion</option>
+			<option>Barquisimeto</option>
+			<option>Cabudare</option>
+			<option>Caracas</option>
+		</select>
+		<input type="checkbox" value="" name="acepto">
+		Acepto las condiciones <br> <br>
+			<input type="button" value="Registrar" onclick="validar(this.form)">
+	</form>
+</body>
+</html>

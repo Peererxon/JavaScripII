@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Desafío 3 - JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="contenedor">
+        <form name="formulario">
+            <h1 name="final" id="exito">Registro Exitoso!</h1>
+            <div class="caja">
+                <label>Cedula</label><br>
+                <input type="text" name="cedula" class="info"><label class="error"></label><br><br>
+                <label>Nombre</label><br>
+                <input type="text" name="nombre" class="info"><label class="error"></label><br><br>
+                <label>Fecha de nacimiento</label><br>
+                <select name="dia" class="info">
+                    <option>Día</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                    <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                    <option>11</option><option>12</option><option>13</option><option>14</option><option>15</option>
+                    <option>16</option><option>17</option><option>18</option><option>19</option><option>20</option>
+                    <option>21</option><option>22</option><option>23</option><option>24</option><option>25</option>
+                    <option>26</option><option>27</option><option>28</option><option>29</option><option>30</option>
+                </select>
+                <select name="mes">
+                    <option>Mes</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+                    <option>6</option><option>7</option><option>8</option><option>9</option><option>10</option>
+                    <option>11</option><option>12</option>
+                </select>
+                <select name="ano">
+                    <option>Año</option>
+                    <option>2010</option><option>2009</option><option>2008</option><option>2007</option><option>2006</option>
+                    <option>2005</option><option>2004</option><option>2003</option><option>2002</option><option>2001</option>
+                    <option>2000</option><option>1999</option><option>1998</option><option>1997</option><option>1996</option>
+                    <option>1995</option><option>1994</option><option>1993</option><option>1992</option><option>1991</option>
+                    <option>1990</option><option>1989</option><option>1988</option><option>1987</option><option>1986</option>
+                    <option>1985</option><option>1984</option><option>1983</option><option>1982</option><option>1981</option>
+                    <option>1980</option><option>1979</option><option>1978</option><option>1977</option><option>1976</option>
+                    <option>1975</option><option>1974</option><option>1973</option><option>1972</option><option>1971</option>
+                </select><label class="error"></label><br><br>
+                <label>Sexo</label><br>
+                <input type="radio" name="sexo" value="Masculino" class="radio" checked>
+                <label>Masculino</label>
+                <input type="radio" name="sexo" value="Femenino" class="radio">
+                <label>Femenino</label><br><br>
+                <label>Correo</label><br>
+                <input type="text" name="correo" class="info"><label class="error"></label><br><br>
+                <label>Teléfono</label><br>
+                <input type="text" name="telefono" class="info"><label class="error"></label><br><br>
+            </div>
+            <div class="caja">
+                <label>Nombre de usuario</label><br>
+                <input type="text" name="usuario" class="info"><label class="error"></label><br><br>
+                <label>Clave</label><br>
+                <input type="password" name="clave" class="info"><label class="error"></label><br><br>
+                <label>Confirmación de clave</label><br>
+                <input type="password" name="verifClave" class="info"><label class="error"></label><br><br>
+                <label>Curso</label><br>
+                <select name="curso" class="info">
+                    <option>Selecione un curso</option>
+                    <option>JavaScript</option>
+                    <option>Lógica de programación</option>
+                    <option>TypeScript</option>
+                    <option>Git</option>
+                    <option>Java</option>
+                    <option>C++</option>
+                    <option>PHP</option>
+                </select>
+                <select name="nivel">
+                    <option>Selecione un nivel</option>
+                    <option>Nivel I</option>
+                    <option>Nivel II</option>
+                    <option>Nivel III</option>
+                    <option>Nivel IV</option>
+                </select><label class="error"></label><br><br>
+                <label>Horario</label><br>
+                <textarea name="horario" class="info"></textarea><label class="error"></label><br>
+                <input type="button" name="registrar" value="Procesar" class="boton">
+            </div>
+        </form>
+    </div>
+</body>
+    <script src="lib_validaciones.js"></script>
+    <script src="funciones.js"></script>
+</html>
